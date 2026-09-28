@@ -1,38 +1,129 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
     background: #f2f4f8;
+    color: #222;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
     text-align: center;
-    padding: 30px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 0.95em;
+}
+
+.quiz-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.quiz-table th {
+    background: #3f6fb0;
+    color: #fff;
+    padding: 14px;
+    font-size: 1.05em;
+}
+
+.quiz-table td {
+    vertical-align: top;
+    padding: 20px;
+    width: 50%;
+    border-top: 1px solid #e0e0e0;
 }
 
 .word-box {
     background: #eef3fa;
-    padding: 12px;
     border-radius: 6px;
-    display: inline-block;
+    padding: 12px;
     margin-bottom: 12px;
+    text-align: center;
+}
+
+.label {
+    font-size: 0.85em;
+    color: #666;
+    display: block;
 }
 
 .word {
     font-size: 1.4em;
     font-weight: bold;
+    color: #2c3e50;
 }
 
-input {
-    padding: 8px;
+input[type="text"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
     font-size: 1em;
-    margin: 10px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
 }
 
 button {
-    padding: 8px 14px;
-    margin: 5px;
+    flex: 1;
+    padding: 8px 10px;
     border: none;
     border-radius: 6px;
     background: #3f6fb0;
     color: #fff;
     cursor: pointer;
+    font-size: 0.95em;
+    transition: background 0.2s;
 }
 
-.result.correct { color: green; }
-.result.wrong { color: red; }
+button:hover {
+    background: #2f568c;
+}
+
+.result {
+    font-weight: bold;
+    min-height: 20px;
+}
+
+.result.correct {
+    color: #2e7d32;
+}
+
+.result.wrong {
+    color: #c62828;
+}
+
+.score {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #2c3e50;
+}
+
+@media (max-width: 600px) {
+    .quiz-table, .quiz-table thead, .quiz-table tbody, .quiz-table tr, .quiz-table td {
+        display: block;
+        width: 100%;
+    }
+}
