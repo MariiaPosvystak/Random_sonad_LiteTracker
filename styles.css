@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f8;
+    text-align: center;
+    padding: 30px;
+}
+
+.word-box {
+    background: #eef3fa;
+    padding: 12px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.word {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+input {
+    padding: 8px;
+    font-size: 1em;
+    margin: 10px;
+}
+
+button {
+    padding: 8px 14px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    background: #3f6fb0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.result.correct { color: green; }
+.result.wrong { color: red; }
