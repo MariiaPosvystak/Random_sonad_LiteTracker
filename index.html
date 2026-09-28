@@ -3,29 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sõnavara kontroll</title>
+    <title>Hajusrakenduste sõnavara kontroll</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
     <h1>Hajusrakenduste sõnavara kontroll</h1>
+    <p class="subtitle">Kontrolli oma teadmisi hajusrakenduste terminoloogiast</p>
 </header>
 
 <main>
-    <div class="word-box">
-        <span class="label">Sõna:</span>
-        <span id="ee-word" class="word"></span>
-    </div>
+    <table class="quiz-table">
+        <thead>
+        <tr>
+            <th>Eesti → Vene</th>
+            <th>Vene → Eesti</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <!-- 1. veerg: kuvatakse eestikeelne sõna, kasutaja sisestab venekeelse vaste -->
+            <td>
+                <div class="word-box">
+                    <span class="label">Sõna:</span>
+                    <span id="ee-word" class="word"></span>
+                </div>
+                <input type="text" id="ee-answer" placeholder="Sisesta tõlge vene keeles">
+                <div class="buttons">
+                    <button id="ee-check">Kontrolli</button>
+                    <button id="ee-refresh">Uus sõna</button>
+                </div>
+                <p id="ee-result" class="result"></p>
+            </td>
 
-    <input type="text" id="ee-answer" placeholder="Sisesta tõlge vene keeles">
+            <!-- 2. veerg: kuvatakse venekeelne sõna, kasutaja sisestab eestikeelse vaste -->
+            <td>
+                <div class="word-box">
+                    <span class="label">Sõna:</span>
+                    <span id="ru-word" class="word"></span>
+                </div>
+                <input type="text" id="ru-answer" placeholder="Sisesta tõlge eesti keeles">
+                <div class="buttons">
+                    <button id="ru-check">Kontrolli</button>
+                    <button id="ru-refresh">Uus sõna</button>
+                </div>
+                <p id="ru-result" class="result"></p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 
-    <div class="buttons">
-        <button id="ee-check">Kontrolli</button>
-        <button id="ee-refresh">Uus sõna</button>
-    </div>
-
-    <p id="ee-result" class="result"></p>
+    <section class="score">
+        <p>Skoor: <span id="score">0</span> / <span id="attempts">0</span></p>
+    </section>
 </main>
 
 <script src="index.js"></script>
